@@ -1,0 +1,228 @@
+[debug] [2025-11-06T04:48:45.073Z] ----------------------------------------------------------------------
+[debug] [2025-11-06T04:48:45.075Z] Command:       C:\nvm4w\nodejs\node.exe C:\nvm4w\nodejs\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2025-11-06T04:48:45.075Z] CLI Version:   14.24.0
+[debug] [2025-11-06T04:48:45.075Z] Platform:      win32
+[debug] [2025-11-06T04:48:45.075Z] Node Version:  v20.19.4
+[debug] [2025-11-06T04:48:45.075Z] Time:          Thu Nov 06 2025 01:48:45 GMT-0300 (Horário Padrão de Brasília)
+[debug] [2025-11-06T04:48:45.075Z] ----------------------------------------------------------------------
+[debug] 
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\marco\AppLucasF
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] 
+[debug] [2025-11-06T04:54:19.933Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-11-06T04:54:19.935Z] > authorizing via signed-in user (marcosww.15@gmail.com)
+[debug] [2025-11-06T04:54:19.937Z] Checked if tokens are valid: true, expires at: 1762407732204
+[debug] [2025-11-06T04:54:19.937Z] Checked if tokens are valid: true, expires at: 1762407732204
+[debug] [2025-11-06T04:54:19.940Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
+[debug] [2025-11-06T04:54:21.024Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2025-11-06T04:54:21.024Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] 
+=== Dataconnect Setup
+[debug] [2025-11-06T04:55:51.827Z] Checked if tokens are valid: true, expires at: 1762407732204
+[debug] [2025-11-06T04:55:51.828Z] Checked if tokens are valid: true, expires at: 1762407732204
+[debug] [2025-11-06T04:55:51.828Z] >>> [apiv2][query] GET https://cloudbilling.googleapis.com/v1/projects/app-barbeqr/billingInfo [none]
+[debug] [2025-11-06T04:55:53.100Z] <<< [apiv2][status] GET https://cloudbilling.googleapis.com/v1/projects/app-barbeqr/billingInfo 200
+[debug] [2025-11-06T04:55:53.100Z] <<< [apiv2][body] GET https://cloudbilling.googleapis.com/v1/projects/app-barbeqr/billingInfo {"name":"projects/app-barbeqr/billingInfo","projectId":"app-barbeqr","billingAccountName":"","billingEnabled":false}
+[info] i  dataconnect: ensuring required API firebasedataconnect.googleapis.com is enabled... 
+[debug] [2025-11-06T04:55:53.102Z] Checked if tokens are valid: true, expires at: 1762407732204
+[debug] [2025-11-06T04:55:53.102Z] Checked if tokens are valid: true, expires at: 1762407732204
+[info] i  dataconnect: ensuring required API sqladmin.googleapis.com is enabled... 
+[debug] [2025-11-06T04:55:53.103Z] Checked if tokens are valid: true, expires at: 1762407732204
+[debug] [2025-11-06T04:55:53.103Z] Checked if tokens are valid: true, expires at: 1762407732204
+[debug] [2025-11-06T04:55:53.104Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/app-barbeqr/services/firebasedataconnect.googleapis.com [none]
+[debug] [2025-11-06T04:55:53.104Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/app-barbeqr/services/firebasedataconnect.googleapis.com x-goog-quota-user=projects/app-barbeqr
+[debug] [2025-11-06T04:55:53.106Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/app-barbeqr/services/sqladmin.googleapis.com [none]
+[debug] [2025-11-06T04:55:53.106Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/app-barbeqr/services/sqladmin.googleapis.com x-goog-quota-user=projects/app-barbeqr
+[debug] [2025-11-06T04:55:54.210Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/app-barbeqr/services/sqladmin.googleapis.com 200
+[debug] [2025-11-06T04:55:54.210Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/app-barbeqr/services/sqladmin.googleapis.com [omitted]
+[warn] !  dataconnect: missing required API sqladmin.googleapis.com. Enabling now... 
+[debug] [2025-11-06T04:55:54.211Z] Checked if tokens are valid: true, expires at: 1762407732204
+[debug] [2025-11-06T04:55:54.211Z] Checked if tokens are valid: true, expires at: 1762407732204
+[debug] [2025-11-06T04:55:54.211Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/app-barbeqr/services/sqladmin.googleapis.com:enable [none]
+[debug] [2025-11-06T04:55:54.211Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/app-barbeqr/services/sqladmin.googleapis.com:enable x-goog-quota-user=projects/app-barbeqr
+[debug] [2025-11-06T04:55:54.214Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/app-barbeqr/services/firebasedataconnect.googleapis.com 200
+[debug] [2025-11-06T04:55:54.214Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/app-barbeqr/services/firebasedataconnect.googleapis.com [omitted]
+[warn] !  dataconnect: missing required API firebasedataconnect.googleapis.com. Enabling now... 
+[debug] [2025-11-06T04:55:54.215Z] Checked if tokens are valid: true, expires at: 1762407732204
+[debug] [2025-11-06T04:55:54.215Z] Checked if tokens are valid: true, expires at: 1762407732204
+[debug] [2025-11-06T04:55:54.215Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/app-barbeqr/services/firebasedataconnect.googleapis.com:enable [none]
+[debug] [2025-11-06T04:55:54.215Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/app-barbeqr/services/firebasedataconnect.googleapis.com:enable x-goog-quota-user=projects/app-barbeqr
+[debug] [2025-11-06T04:55:55.511Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/app-barbeqr/services/sqladmin.googleapis.com:enable 200
+[debug] [2025-11-06T04:55:55.512Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/app-barbeqr/services/sqladmin.googleapis.com:enable [omitted]
+[debug] [2025-11-06T04:55:55.669Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/app-barbeqr/services/firebasedataconnect.googleapis.com:enable 200
+[debug] [2025-11-06T04:55:55.669Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/app-barbeqr/services/firebasedataconnect.googleapis.com:enable [omitted]
+[debug] [2025-11-06T04:56:05.682Z] Checked if tokens are valid: true, expires at: 1762407732204
+[debug] [2025-11-06T04:56:05.683Z] Checked if tokens are valid: true, expires at: 1762407732204
+[debug] [2025-11-06T04:56:05.683Z] >>> [apiv2][query] GET https://firebasedataconnect.googleapis.com/v1/projects/app-barbeqr/locations/-/services [none]
+[debug] [2025-11-06T04:56:07.050Z] <<< [apiv2][status] GET https://firebasedataconnect.googleapis.com/v1/projects/app-barbeqr/locations/-/services 200
+[debug] [2025-11-06T04:56:07.050Z] <<< [apiv2][body] GET https://firebasedataconnect.googleapis.com/v1/projects/app-barbeqr/locations/-/services {}
+[info] +  dataconnect: Detected existing apps . (admin_node), . (web) 
+[debug] [2025-11-06T04:58:16.228Z] Checked if tokens are valid: true, expires at: 1762407732204
+[debug] [2025-11-06T04:58:16.228Z] Checked if tokens are valid: true, expires at: 1762407732204
+[debug] [2025-11-06T04:58:16.229Z] >>> [apiv2][query] GET https://firebasedataconnect.googleapis.com/v1/projects/app-barbeqr/locations/us-east4/services/applucasf/schemas/main [none]
+[debug] [2025-11-06T04:58:17.108Z] <<< [apiv2][status] GET https://firebasedataconnect.googleapis.com/v1/projects/app-barbeqr/locations/us-east4/services/applucasf/schemas/main 404
+[debug] [2025-11-06T04:58:17.108Z] <<< [apiv2][body] GET https://firebasedataconnect.googleapis.com/v1/projects/app-barbeqr/locations/us-east4/services/applucasf/schemas/main {"error":{"code":404,"message":"Resource 'projects/app-barbeqr/locations/us-east4/services/applucasf/schemas/main' was not found","status":"NOT_FOUND","details":[{"@type":"type.googleapis.com/google.rpc.ResourceInfo","resourceName":"projects/app-barbeqr/locations/us-east4/services/applucasf/schemas/main"}]}}
+[info] +  Wrote dataconnect\dataconnect.yaml 
+[info] +  Wrote dataconnect\seed_data.gql 
+[info] +  Wrote dataconnect\schema\schema.gql 
+[info] +  Wrote dataconnect\example\connector.yaml 
+[info] +  Wrote dataconnect\example\queries.gql 
+[info] +  Wrote dataconnect\example\mutations.gql 
+[info] +  Wrote dataconnect\example\connector.yaml 
+[info] i  dataconnect: Installing the generated SDKs ... 
+[info] i  dataconnect: downloading dataconnect-emulator-2.17.0.exe... {"metadata":{"emulator":{"name":"dataconnect"},"message":"downloading dataconnect-emulator-2.17.0.exe..."}}
+[debug] [2025-11-06T04:58:17.152Z] >>> [apiv2][query] GET https://storage.googleapis.com/firemat-preview-drop/emulator/dataconnect-emulator-windows-amd64-v2.17.0 
+[debug] [2025-11-06T04:58:17.527Z] <<< [apiv2][status] GET https://storage.googleapis.com/firemat-preview-drop/emulator/dataconnect-emulator-windows-amd64-v2.17.0 200
+[debug] [2025-11-06T04:58:17.528Z] <<< [apiv2][body] GET https://storage.googleapis.com/firemat-preview-drop/emulator/dataconnect-emulator-windows-amd64-v2.17.0 [stream]
+[debug] [2025-11-06T04:58:19.521Z] defaultcredentials: writing to file C:\Users\marco\AppData\Roaming\firebase\marcosww_15_gmail.com_application_default_credentials.json
+[info] +  dataconnect: Installed generated SDKs for . (web) 
+[info] i  Visit https://firebase.google.com/docs/data-connect/web-sdk#react for more information on how to set up React Generated SDKs for Firebase Data Connect 
+[info] 
+=== Firestore Setup
+[info] i  firestore: ensuring required API firestore.googleapis.com is enabled... 
+[debug] [2025-11-06T04:58:28.264Z] Checked if tokens are valid: true, expires at: 1762407732204
+[debug] [2025-11-06T04:58:28.264Z] Checked if tokens are valid: true, expires at: 1762407732204
+[debug] [2025-11-06T04:58:28.265Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/app-barbeqr/services/firestore.googleapis.com [none]
+[debug] [2025-11-06T04:58:28.265Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/app-barbeqr/services/firestore.googleapis.com x-goog-quota-user=projects/app-barbeqr
+[debug] [2025-11-06T04:58:29.265Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/app-barbeqr/services/firestore.googleapis.com 200
+[debug] [2025-11-06T04:58:29.265Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/app-barbeqr/services/firestore.googleapis.com [omitted]
+[info] +  firestore: required API firestore.googleapis.com is enabled 
+[debug] [2025-11-06T04:58:29.270Z] Checked if tokens are valid: true, expires at: 1762407732204
+[debug] [2025-11-06T04:58:29.271Z] Checked if tokens are valid: true, expires at: 1762407732204
+[debug] [2025-11-06T04:58:29.271Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/app-barbeqr/databases [none]
+[debug] [2025-11-06T04:58:29.927Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/app-barbeqr/databases 200
+[debug] [2025-11-06T04:58:29.928Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/app-barbeqr/databases {"databases":[{"name":"projects/app-barbeqr/databases/(default)","uid":"f8a092da-057d-4b94-872a-affc37d52e28","createTime":"2025-10-18T13:41:25.138970Z","updateTime":"2025-10-18T13:41:25.138970Z","locationId":"southamerica-east1","type":"FIRESTORE_NATIVE","concurrencyMode":"PESSIMISTIC","versionRetentionPeriod":"3600s","earliestVersionTime":"2025-11-06T03:58:28.549490Z","appEngineIntegrationMode":"DISABLED","keyPrefix":"i","pointInTimeRecoveryEnablement":"POINT_IN_TIME_RECOVERY_DISABLED","deleteProtectionState":"DELETE_PROTECTION_DISABLED","databaseEdition":"STANDARD","freeTier":true,"realtimeUpdatesMode":"REALTIME_UPDATES_MODE_ENABLED","etag":"IIX6sNPe3JADMKqkmO3UyZAD"}]}
+[info] 
+[info] Firestore Security Rules allow you to define how and when to allow
+[info] requests. You can keep these rules in your project directory
+[info] and publish them with firebase deploy.
+[info] 
+[debug] [2025-11-06T04:59:28.638Z] Checked if tokens are valid: true, expires at: 1762407732204
+[debug] [2025-11-06T04:59:28.638Z] Checked if tokens are valid: true, expires at: 1762407732204
+[debug] [2025-11-06T04:59:28.639Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/app-barbeqr/releases pageSize=10&pageToken=
+[debug] [2025-11-06T04:59:29.778Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/app-barbeqr/releases 200
+[debug] [2025-11-06T04:59:29.778Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/app-barbeqr/releases {"releases":[{"name":"projects/app-barbeqr/releases/cloud.firestore","rulesetName":"projects/app-barbeqr/rulesets/2f30b42d-9d53-4421-8eaa-9aa8db727b65","createTime":"2025-10-18T13:41:32.147448Z","updateTime":"2025-11-06T04:29:28.198023Z"}]}
+[debug] [2025-11-06T04:59:29.779Z] Checked if tokens are valid: true, expires at: 1762407732204
+[debug] [2025-11-06T04:59:29.779Z] Checked if tokens are valid: true, expires at: 1762407732204
+[debug] [2025-11-06T04:59:29.779Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/app-barbeqr/rulesets/2f30b42d-9d53-4421-8eaa-9aa8db727b65 [none]
+[debug] [2025-11-06T04:59:30.713Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/app-barbeqr/rulesets/2f30b42d-9d53-4421-8eaa-9aa8db727b65 200
+[debug] [2025-11-06T04:59:30.713Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/app-barbeqr/rulesets/2f30b42d-9d53-4421-8eaa-9aa8db727b65 [omitted]
+[info] i  Downloaded the existing Firestore Security Rules from the Firebase console 
+[info] 
+[info] Firestore indexes allow you to perform complex queries while
+[info] maintaining performance that scales with the size of the result
+[info] set. You can keep index definitions in your project directory
+[info] and publish them with firebase deploy.
+[info] 
+[debug] [2025-11-06T04:59:47.778Z] Checked if tokens are valid: true, expires at: 1762407732204
+[debug] [2025-11-06T04:59:47.778Z] Checked if tokens are valid: true, expires at: 1762407732204
+[debug] [2025-11-06T04:59:47.779Z] Checked if tokens are valid: true, expires at: 1762407732204
+[debug] [2025-11-06T04:59:47.779Z] Checked if tokens are valid: true, expires at: 1762407732204
+[debug] [2025-11-06T04:59:47.779Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/app-barbeqr/databases/(default)/collectionGroups/-/indexes [none]
+[debug] [2025-11-06T04:59:47.782Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/app-barbeqr/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false OR ttlConfig:* [none]
+[debug] [2025-11-06T04:59:48.034Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/app-barbeqr/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false OR ttlConfig:* 200
+[debug] [2025-11-06T04:59:48.034Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/app-barbeqr/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false OR ttlConfig:* {"fields":[{"name":"projects/app-barbeqr/databases/(default)/collectionGroups/__default__/fields/*","indexConfig":{"indexes":[{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","order":"ASCENDING"}],"state":"READY"},{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","order":"DESCENDING"}],"state":"READY"},{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","arrayConfig":"CONTAINS"}],"state":"READY"}]}}]}
+[debug] [2025-11-06T04:59:48.046Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/app-barbeqr/databases/(default)/collectionGroups/-/indexes 200
+[debug] [2025-11-06T04:59:48.047Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/app-barbeqr/databases/(default)/collectionGroups/-/indexes {}
+[info] i  Downloaded the existing Firestore indexes from the Firebase console 
+[info] +  Wrote firestore.rules 
+[info] +  Wrote firestore.indexes.json 
+[info] 
+=== Genkit Setup
+[debug] [2025-11-06T05:00:16.548Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-11-06T05:00:16.548Z] > authorizing via signed-in user (marcosww.15@gmail.com)
+[debug] [2025-11-06T05:00:16.548Z] [iam] checking project app-barbeqr for permissions ["firebase.projects.get"]
+[debug] [2025-11-06T05:00:16.549Z] Checked if tokens are valid: true, expires at: 1762407732204
+[debug] [2025-11-06T05:00:16.549Z] Checked if tokens are valid: true, expires at: 1762407732204
+[debug] [2025-11-06T05:00:16.550Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/app-barbeqr:testIamPermissions [none]
+[debug] [2025-11-06T05:00:16.550Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/app-barbeqr:testIamPermissions x-goog-quota-user=projects/app-barbeqr
+[debug] [2025-11-06T05:00:16.550Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/app-barbeqr:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2025-11-06T05:00:17.449Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/app-barbeqr:testIamPermissions 200
+[debug] [2025-11-06T05:00:17.449Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/app-barbeqr:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2025-11-06T05:00:17.449Z] Checked if tokens are valid: true, expires at: 1762407732204
+[debug] [2025-11-06T05:00:17.450Z] Checked if tokens are valid: true, expires at: 1762407732204
+[debug] [2025-11-06T05:00:17.450Z] Checked if tokens are valid: true, expires at: 1762407732204
+[debug] [2025-11-06T05:00:17.450Z] Checked if tokens are valid: true, expires at: 1762407732204
+[debug] [2025-11-06T05:00:17.450Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/app-barbeqr/services/cloudfunctions.googleapis.com [none]
+[debug] [2025-11-06T05:00:17.450Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/app-barbeqr/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/app-barbeqr
+[debug] [2025-11-06T05:00:17.453Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/app-barbeqr/services/runtimeconfig.googleapis.com [none]
+[debug] [2025-11-06T05:00:17.453Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/app-barbeqr/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/app-barbeqr
+[debug] [2025-11-06T05:00:18.457Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/app-barbeqr/services/cloudfunctions.googleapis.com 200
+[debug] [2025-11-06T05:00:18.457Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/app-barbeqr/services/cloudfunctions.googleapis.com [omitted]
+[debug] [2025-11-06T05:00:18.457Z] Checked if tokens are valid: true, expires at: 1762407732204
+[debug] [2025-11-06T05:00:18.458Z] Checked if tokens are valid: true, expires at: 1762407732204
+[debug] [2025-11-06T05:00:18.458Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/app-barbeqr/services/cloudfunctions.googleapis.com:enable [none]
+[debug] [2025-11-06T05:00:18.458Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/app-barbeqr/services/cloudfunctions.googleapis.com:enable x-goog-quota-user=projects/app-barbeqr
+[debug] [2025-11-06T05:00:18.460Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/app-barbeqr/services/runtimeconfig.googleapis.com 200
+[debug] [2025-11-06T05:00:18.460Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/app-barbeqr/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2025-11-06T05:00:19.783Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/app-barbeqr/services/cloudfunctions.googleapis.com:enable 200
+[debug] [2025-11-06T05:00:19.783Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/app-barbeqr/services/cloudfunctions.googleapis.com:enable [omitted]
+[info] Let's create a new codebase for your functions.
+[info] A directory corresponding to the codebase will be created in your project
+[info] with sample code pre-configured.
+
+[info] See https://firebase.google.com/docs/functions/organize-functions for
+[info] more information on organizing your functions using codebases.
+
+[info] Functions can be deployed with firebase deploy.
+
+[info] +  Wrote functions/package.json 
+[info] +  Wrote functions/.eslintrc.js 
+[info] +  Wrote functions/tsconfig.dev.json 
+[info] +  Wrote functions/tsconfig.json 
+[info] +  Wrote functions/src/index.ts 
+[info] +  Wrote functions/.gitignore 
+[info] 
+[info] i  genkit: Installing Genkit CLI version 1.22.0
+ 
+[info] i  genkit: Installing NPM packages for genkit 
+[info] +  genkit: Successfully installed NPM packages 
+[info] i  genkit: Updating tsconfig.json 
+[info] +  genkit: Successfully updated tsconfig.json 
+[info] i  genkit: Updating package.json 
+[info] +  genkit: Successfully updated package.json 
+[info] 
+[info] 
+Login to Google Cloud using:
+[info]     gcloud auth application-default login --project app-barbeqr
+
+[info] Then start the Genkit developer experience by running:
+[info]     cd functions && npm run genkit:start
+[info] 
+=== Functions Setup
+[debug] [2025-11-06T05:08:37.341Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-11-06T05:08:37.342Z] > authorizing via signed-in user (marcosww.15@gmail.com)
+[debug] [2025-11-06T05:08:37.342Z] [iam] checking project app-barbeqr for permissions ["firebase.projects.get"]
+[debug] [2025-11-06T05:08:37.342Z] Checked if tokens are valid: true, expires at: 1762407732204
+[debug] [2025-11-06T05:08:37.342Z] Checked if tokens are valid: true, expires at: 1762407732204
+[debug] [2025-11-06T05:08:37.342Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/app-barbeqr:testIamPermissions [none]
+[debug] [2025-11-06T05:08:37.342Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/app-barbeqr:testIamPermissions x-goog-quota-user=projects/app-barbeqr
+[debug] [2025-11-06T05:08:37.342Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/app-barbeqr:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2025-11-06T05:08:38.229Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/app-barbeqr:testIamPermissions 200
+[debug] [2025-11-06T05:08:38.230Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/app-barbeqr:testIamPermissions {"permissions":["firebase.projects.get"]}
+[info] 
+Detected existing codebase(s): default
+
+[info] Let's create a new codebase for your functions.
+[info] A directory corresponding to the codebase will be created in your project
+[info] with sample code pre-configured.
+
+[info] See https://firebase.google.com/docs/functions/organize-functions for
+[info] more information on organizing your functions using codebases.
+
+[info] Functions can be deployed with firebase deploy.
+

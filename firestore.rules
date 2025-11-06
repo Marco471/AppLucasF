@@ -1,0 +1,22 @@
+
+
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Agendamentos: apenas usuários logados podem ler e escrever
+    match /agendamentos/{document=**} {
+      allow read, write: if request.auth != null;
+    }
+
+    // Histórico: apenas usuários logados podem ler e apagar
+    match /historico/{document=**} {
+      allow read, write: if request.auth != null;
+    }
+
+    // Preços: apenas usuários logados podem ler e atualizar
+    match /precos/{document=**} {
+      allow read, write: if request.auth != null;
+    }
+  }
+}
