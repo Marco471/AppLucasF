@@ -2,63 +2,49 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Aplicativo LucasF</title>
+  <title>Tela de Cadastro</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>Aplicativo LucasF</h1>
-    <h2>Barbearia com agendamento online</h2>
-  </header>
+  <div class="container">
+    <h2>Cadastro</h2>
+    <form id="cadastroForm">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" required>
 
-  <main>
-    <section>
-      <h3>📸 Screenshots</h3>
-      <div class="screenshots">
-        <figure>
-          <img src="screenshots/login.png" alt="Tela de Login">
-          <figcaption>Tela de Login</figcaption>
-        </figure>
-        <figure>
-          <img src="screenshots/cadastro.png" alt="Tela de Cadastro">
-          <figcaption>Tela de Cadastro</figcaption>
-        </figure>
-        <figure>
-          <img src="screenshots/agendamentos.png" alt="Agendamentos">
-          <figcaption>Agendamentos</figcaption>
-        </figure>
-      </div>
-    </section>
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" required>
 
-    <section>
-      <h3>🚀 Funcionalidades</h3>
-      <ul>
-        <li>Cadastro e login de clientes</li>
-        <li>Agendamento de serviços (barba, cabelo, etc.)</li>
-        <li>Alteração de preço em tempo real</li>
-        <li>Histórico de agendamentos com opção de exclusão</li>
-        <li>Visualização de preços atualizados no app do cliente</li>
-        <li>Conexão com Firebase para dados em tempo real</li>
-      </ul>
-    </section>
+      <label for="senha">Senha:</label>
+      <input type="password" id="senha" name="senha" required minlength="6">
 
-    <section>
-      <h3>🛠️ Tecnologias</h3>
-      <ul>
-        <li>React Native</li>
-        <li>Expo</li>
-        <li>Firebase (Auth, Firestore, Realtime Database)</li>
-      </ul>
-    </section>
+      <label for="confirmarSenha">Confirmar Senha:</label>
+      <input type="password" id="confirmarSenha" name="confirmarSenha" required minlength="6">
 
-    <section>
-      <h3>🎯 Portfólio</h3>
-      <p>
-        Este projeto serve como demonstração prática de um app completo de agendamento de barbearia,
-        integrando backend em tempo real e funcionalidades de usuário.
-      </p>
-    </section>
-  </main>
+      <button type="submit">Cadastrar</button>
+    </form>
+    <p id="mensagem"></p>
+  </div>
+
+  <script>
+    const form = document.getElementById('cadastroForm');
+    const mensagem = document.getElementById('mensagem');
+
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+      const senha = document.getElementById('senha').value;
+      const confirmarSenha = document.getElementById('confirmarSenha').value;
+
+      if (senha !== confirmarSenha) {
+        mensagem.textContent = "As senhas não coincidem!";
+        mensagem.style.color = "red";
+      } else {
+        mensagem.textContent = "Cadastro realizado com sucesso!";
+        mensagem.style.color = "green";
+        form.reset();
+      }
+    });
+  </script>
 </body>
 </html>
 
